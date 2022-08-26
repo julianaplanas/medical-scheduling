@@ -1,0 +1,903 @@
+:root {
+    --font-color: #6c757d;
+    --button-bg: #2a9d8f;
+    --button-color: #fff;
+    --button-hover: #1B655C;
+    --toast: #CBC6E2;
+    --toast--hover: #968EC5;
+    --toast--bg: #E0DDEE;
+    --toast--cancelled: #da7070;
+    --toast--hover--cancelled: #c82828;
+    --toast--bg--cancelled: #edb7b7;
+    --border-radius: 0.5rem;
+    --button--border-radius : 0.8rem;
+    --titles-color: #001219;
+    --scrollbar-color: #94cec6;
+    --background-hover: #f5f5f8;
+    --background-modal: #e8e8ef;
+    --background-card: #ece9fc;
+}
+
+* {
+    color: var(--font-color);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+}
+
+
+button {
+    font-size: 1.8rem;
+    border-radius: var(--border-radius);
+}
+
+.btn-primary {
+    border-color: var(--button-bg);
+    background-color: var(--button-bg);
+    border-radius: var(--border-radius);
+}
+
+.btn-primary a {
+    color: #ffffff;
+}
+
+.btn-primary a:hover {
+    text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary,
+.btn-primary.focus,
+.btn-primary:focus{
+    color: #fff;
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+.btn-outline-primary {
+   border-color: var(--button-bg);
+   color: var(--button-bg);
+   border-radius: var(--border-radius);
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus{
+    color: var(--button-hover);
+}
+
+a {
+    color: var(--button-bg);
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: var(--button-hover);
+    color: #ffffff;
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--titles-color);
+}
+
+h2 {
+    font-size: 4rem;
+    color: var(--titles-color);
+}
+
+h3 {
+    font-size: 3rem;
+    color: var(--titles-color);
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.row {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+/*********** header.jsp ***********/
+
+.nav-img-logo {
+    margin-left: 15px;
+}
+
+/*********** home.jsp ***********/
+
+.homepage {
+    background-image: linear-gradient(transparent, rgba(255, 255, 255)), url(../img/banner.png);
+    width: 100%;
+    height: 77vh;
+    background-size: cover;
+}
+
+.homepage-text {
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+
+.homepage-text h1 {
+    font-size: 6rem;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.homepage-text p {
+    font-size: 2.5rem;
+    margin: 2rem;
+    padding-bottom: 2rem;
+    text-shadow: 1px 1px 1px #fff;
+    color: var(--titles-color);
+}
+
+.homepage-button {
+    margin-top: 2rem;
+    padding: 1rem 5rem;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: 0.5s;
+}
+
+.homepage-button:hover {
+    background-color: var(--button-hover);
+}
+
+.flex-nav-disconnected {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0!important;
+    padding-right: 20px;
+}
+
+/*********** doctorList.jsp ***********/
+
+.doctor-data {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctor-data-info div {
+    font-weight: 700;
+}
+
+.doctor-list-centre {
+    display: flex;
+    justify-content: center;
+}
+
+.div-complete-doctor-list {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-gap: 20px;
+}
+
+.div-doctor-list {
+    display: inline-block!important;
+}
+
+.background-hover:hover {
+    background-color: var(--background-hover);
+}
+
+.button-doctor-list {
+    margin-bottom: 15px;
+}
+
+.button-doctor-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.title-doctor-list {
+    margin-bottom: 40px;
+}
+
+.container {
+    min-height: 70vh;
+}
+
+.dropdown-specialty {
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.dropdown-specialty ul li a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.card-subtitle {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/*********** doctorPublicProfile.jsp ***********/
+
+.table-profile {
+    display: flex;
+    justify-content: center;
+}
+
+.table-profile ul {
+    width: 50%;
+}
+
+.table-profile ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.table-profile ul li strong{
+    padding-right: .5rem;
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/*********** doctorAvailability.jsp - updateDoctorHours.jsp ***********/
+
+.div-button-update {
+    display: inline;
+}
+
+.div-doctor-hours {
+    display: flex;
+    justify-content: center;
+}
+
+.form-doctor-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-doctor-hour .col-sm-4:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-doctor-hour {
+    margin-top: 1.5rem;
+}
+
+/*Toast / Notifications*/
+
+.toast.show {
+    display: block;
+    opacity: 1;
+}
+
+.toast {
+    max-width: 35rem;
+    overflow: hidden;
+    background-color: var(--toast);
+    background-clip: padding-box;
+    border: 1px solid var(--toast--hover);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin-bottom: 0.5rem;
+}
+
+.toast-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--toast);
+    background-clip: padding-box;
+    border-bottom: 1px solid var(--toast--hover);
+}
+
+.toast-body {
+    padding: 0.75rem;
+    background-color: var(--toast--bg);
+}
+
+.toast-cancelled .toast-header {
+    background-color: var(--toast--cancelled);
+    border-bottom-color: var(--toast--hover--cancelled);
+    color: #ffffff;
+}
+
+.toast-cancelled .toast-header strong,
+.toast-cancelled .toast-header small {
+    color: #ffffff;
+}
+
+.toast-cancelled .toast-body {
+    background-color: var(--toast--bg--cancelled);
+}
+
+
+/*********** patientPrescriptions.jsp - doctorPrescriptions.jsp ***********/
+
+
+.prescription-list-centre {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.div-complete-prescription-list {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-gap: 40px;
+}
+
+.prescription {
+    width: 300px;
+    height: 400px;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--font-color);
+    box-shadow: 2px 2px 5px grey;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-left: .5rem solid var(--toast--hover);
+}
+
+.div-prescription-logo {
+    margin-bottom: 20px;
+    flex-shrink: 1;
+}
+
+.prescription-logo {
+    width: 30%;
+}
+
+.prescription div p  {
+    font-size: 25px;
+    color: var(--titles-color);
+}
+
+.prescription div strong {
+    color: var(--button-bg);
+}
+
+.div-prescription-name {
+    flex-shrink: 1;
+}
+
+.div-prescription-cost {
+    flex-shrink: 1;
+}
+
+.div-prescription-firm {
+    flex-shrink: 4;
+}
+
+.div-prescription {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.div-prescription-patient {
+    margin: auto;
+}
+
+
+/******* upcoming appointments ********/
+
+.toast-cancelled button span {
+    color: #ffffff;
+}
+
+
+.flex-container-upcoming-appointment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-upcoming-appointment {
+    width: 70%;
+    background-color: var(--background-card);
+    border-left: .5rem solid var(--toast--hover);
+    padding: 1rem 0 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: var(--border-radius);
+}
+
+.buttons-appointments {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.modal-header {
+    background-color: var(--background-modal);
+    border-radius: var(--border-radius);
+}
+
+/******* reviews ********/
+
+.container-reviews {
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-review {
+    border: 1px solid var(--button-hover);
+    border-radius: var(--border-radius);
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.header-review {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-review p {
+    margin-top: 1.5rem;
+}
+
+.container-reviews--profile {
+    margin-top: 3rem;
+}
+
+.container-reviews--profile ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.container-reviews--profile ul li {
+    width: 60%;
+}
+
+/*Rating stars*/
+
+.rating {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.rating span {
+    color: lightgray;
+}
+
+.filled:before {
+    content: "\2605";
+    color: #FFC000;
+    position: absolute;
+}
+
+.rating-star {
+    font-size: 2rem;
+}
+
+.rating-star-general {
+    font-size: 1.5rem;
+}
+
+/*********** New appointment ***********/
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border-style: none;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    border-top-style: none;
+}
+
+.custom-checkbox {
+    border-radius: 0.6rem;
+    border: 1px solid var(--toast);
+    border-left: .4rem solid var(--toast--hover);
+    background-color: var(--toast);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    padding-left: .6rem;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin: 0;
+}
+
+.custom-checkbox label {
+    margin-bottom: 0;
+    margin-left: .6rem;
+}
+
+/*********** Close button ***********/
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+/*********** Validator ***********/
+
+.validator-hidden-control {
+    position: absolute;
+    visibility: collapse;
+}
+
+/*********** Error labels ***********/
+
+.error {
+    font-weight: bold;
+    color: var(--toast--hover--cancelled);
+}
+
+/*********** BOOTSTRAP ***********/
+
+:root {
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap!important;
+}
+
+.flex-nwrap {
+    flex-wrap: nowrap!important;
+}
+
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+.text-decoration-none {
+    text-decoration: none!important;
+}
+
+.justify-content-center {
+    justify-content: center!important;
+}
+
+.nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-color: var(--bs-link-color);
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+    --bs-nav-link-disabled-color: #6c757d;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.text-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.me-2 {
+    margin-right: 0.5rem!important;
+}
+
+.py-3 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+
+.my-4 {
+    margin-top: 1.5rem!important;
+    margin-bottom: 1.5rem!important;
+}
+
+.border-top {
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+@media (min-width: 768px) {
+    .justify-content-md-between {
+        justify-content: space-between!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .mb-md-0 {
+        margin-bottom: 0!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+.container-appointments {
+    padding: 2rem 0rem;
+}
+
+h4 {
+    margin: 2rem 0rem 1rem;
+}
+
+.table-image td, th {
+    vertical-align: middle;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.ml-2, .mx-2 {
+    margin-left: 0.5rem!important;
+}
+.mb-1, .my-1 {
+    margin-bottom: 0.25rem!important;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+
+
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (max-width: 1024px) {
+
+    /* header.jsp */
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+/****** TABLET ******/
+@media screen and (max-width: 768px) {
+
+    /* Hamburger menu */
+    .hamburger-menu {
+        visibility: visible;
+        display: block;
+    }
+    .nav-menu-burger {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .align-items-center {
+        justify-content: space-between!important;
+    }
+    /* end Hamburger menu */
+
+    h2 {
+        font-size: 3em;
+    }
+
+    /* home.jsp */
+    .homepage-text h1 {
+        font-size: 4.5rem;
+    }
+
+    .homepage-text p {
+        font-size: 2rem;
+    }
+
+    /* doctorAppointments.jsp - patientAppointments.jsp */
+    .container-upcoming-appointment {
+        width: 95%;
+    }
+
+    /* newPrescription.jsp */
+    .go-back-button {
+        margin-top: 10px;
+    }
+
+    /* doctorPrescriptions.jsp - patientPrescriptions.jsp */
+
+    .div-complete-prescription-list {
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* doctorList.jsp */
+    .div-complete-doctor-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 70%;
+    }
+
+    /* doctorPublicProfile.jsp - doctorPersonalProfile.jsp */
+    .container-reviews--profile ul li {
+        width: 80%;
+    }
+
+    .table-profile ul {
+        width: 70%;
+    }
+
+    /* newAppointment.jsp */
+    .custom-control label {
+        font-size: 12px;
+    }
+
+}
+
+
+/****** MOBILE ******/
+@media screen and (max-width: 500px) {
+
+    h2 {
+        font-size: 2em;
+    }
+
+    /* home.jsp */
+    .homepage-text h1 {
+        font-size: 4rem;
+    }
+
+    .homepage-text p {
+        font-size: 2rem;
+    }
+
+    /* login.jsp - updateDoctorInfo.jsp*/
+    .mobile {
+        padding-left: 40px;
+        width: 90%;
+    }
+
+    /* doctorAppointments.jsp - patientAppointments.jsp */
+    .container-upcoming-appointment {
+        width: 95%;
+    }
+
+    .buttons-appointments {
+        flex-wrap: wrap;
+    }
+
+    /* newPrescription.jsp */
+    .go-back-button {
+        margin-top: 10px;
+    }
+
+    /* doctorPrescriptions.jsp - patientPrescriptions.jsp */
+    .div-complete-prescription-list {
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .table-profile ul {
+        width: 70%;
+    }
+
+    /* newAppointment.jsp */
+    .custom-control label {
+        font-size: 9px;
+    }
+}
+
+
